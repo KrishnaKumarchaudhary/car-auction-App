@@ -20,6 +20,8 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Data\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="RequestHelpers\" />
   </ItemGroup>
 
 </Project>

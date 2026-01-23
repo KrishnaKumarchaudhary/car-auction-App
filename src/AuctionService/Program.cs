@@ -10,7 +10,7 @@ builder.Services.AddDbContext<AuctionDbContext>(opt =>
 {
   opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")); // Configures the AuctionDbContext to use PostgreSQL with the connection string from configuration
 });
-
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 var app = builder.Build(); // Builds the WebApplication from the builder, finalizing the service configuration and middleware pipeline
 
 app.UseHttpsRedirection(); // Adds middleware to redirect HTTP requests to HTTPS for secure communication
